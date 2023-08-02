@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block cards %}
+  {% for card in meals %}
+    <div class="col">
+      <div class="card">
+        <img src="{{ card.strMealThumb}}" class="card-img-top" alt="alt="{{ card.idMeal }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ card.strMeal}}</h5>
+          <p class="card-text">{{ card.details }}.</p>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}
